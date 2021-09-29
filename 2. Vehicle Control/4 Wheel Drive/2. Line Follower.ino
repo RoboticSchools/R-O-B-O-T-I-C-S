@@ -1,15 +1,13 @@
 #include <AFMotor.h>
 
-// Change these below Pins to connected pins of IR sensor
-
-#define lefts A5 
+#define lefts A5    --- Change these two numbers to respective numbers those are connected in Arduino.
 #define rights A1 
 
 
-AF_DCMotor motor1(2, MOTOR12_8KHZ);   // Here right side motor is connected to M1
-AF_DCMotor motor2(3, MOTOR12_8KHZ);   // Here left side motor is connected to M4
-AF_DCMotor motor3(1, MOTOR12_8KHZ);   // Here right side motor is connected to M1
-AF_DCMotor motor4(4, MOTOR12_8KHZ);   // Here left side motor is connected to M4
+AF_DCMotor motor1(2, MOTOR12_8KHZ);  // RightHand Side - Front Motor
+AF_DCMotor motor2(3, MOTOR12_8KHZ);  // LeftHand Side - Front Motor
+AF_DCMotor motor3(1, MOTOR12_8KHZ);  // RightHand Side - Back Motor
+AF_DCMotor motor4(4, MOTOR12_8KHZ);  // LeftHand Side - Back Motor
 
 
 
@@ -28,13 +26,13 @@ void loop(){
   //printing values of the sensors to the serial monitor
   Serial.println(digitalRead(lefts));
   Serial.println(digitalRead(rights));
-  //line detected by both
+  // When both sensors are not detecting line
   if(digitalRead(lefts)==0 && digitalRead(rights)==0){
-    //FORWARD
+    
     motor1.run(FORWARD);
     motor1.setSpeed(170);
     motor2.run(FORWARD);
-    motor2.setSpeed(170);
+    motor2.setSpeed(170);       //FORWARD
     motor3.run(FORWARD);
     motor3.setSpeed(170);
     motor4.run(FORWARD);
@@ -42,29 +40,28 @@ void loop(){
 
 
   }
-  //line detected by left sensor
+  //line detected by right sensor
   else if(digitalRead(lefts)==0 && digitalRead(rights)==1){
-    //turn left
+
     motor1.run(BACKWARD);
     motor1.setSpeed(140);
     motor2.run(FORWARD);
     motor2.setSpeed(170);
-    motor3.run(BACKWARD);
+    motor3.run(BACKWARD);     // Turn Right
     motor3.setSpeed(140);
     motor4.run(FORWARD);
     motor4.setSpeed(170);
 
   }
-  //line detected by right sensor
+  //line detected by left sensor
   else if(digitalRead(lefts)==1 && digitalRead(rights)==0){;
-    //turn left
 
 
     motor1.run(FORWARD);
     motor1.setSpeed(170);
     motor2.run(BACKWARD);
     motor2.setSpeed(140);
-    motor3.run(FORWARD);
+    motor3.run(FORWARD);      // Turn Left 
     motor3.setSpeed(170);
     motor4.run(BACKWARD);
     motor4.setSpeed(140);
@@ -74,9 +71,9 @@ void loop(){
   }
   //line detected by none
   else if(digitalRead(lefts)==1 && digitalRead(rights)==1){
-    //stop
+    
     motor1.run(RELEASE);
-    motor2.run(RELEASE);
+    motor2.run(RELEASE);      // stop
     motor3.run(RELEASE);
     motor4.run(RELEASE);
 
