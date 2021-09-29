@@ -1,3 +1,7 @@
+// Created by RoboticSchools.
+// Robotics and Coding always fun when we're doing with our hands.
+// " Welcome to the Roboteer's World "
+
 #include "AFMotor.h"
 
 #define echopin A3 // echo pin  //change these two numbers to respective numbers those are connected in Arduino.
@@ -11,7 +15,7 @@ AF_DCMotor motor2(3, MOTOR12_64KHZ); // create motor object, 64KHz pwm
 int distance;
 long duration;
 
-int set = 15;
+int set = 15;        //This is the distance between object and ultrasonic sensor to respond
  
 void setup() {
   Serial.begin(9600);           // Initialize serial port
@@ -35,10 +39,10 @@ void loop() {
     motor2.run(FORWARD); 
     }
   else{
-     motor1.run(BACKWARD);   // turn it on going left
+     motor1.run(BACKWARD);   // turn it on going backward
      motor2.run(BACKWARD); 
      delay(600);
-     motor1.run(BACKWARD);   // turn it on going left
+     motor1.run(BACKWARD);   // turn it on going right
      motor2.run(FORWARD);
      delay(1000); 
    }
