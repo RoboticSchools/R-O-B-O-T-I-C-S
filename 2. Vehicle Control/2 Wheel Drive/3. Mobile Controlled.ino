@@ -1,12 +1,12 @@
 #include "AFMotor.h"
 
-const int MOTOR_2 = 2; 
-const int MOTOR_3 = 3; 
+const int MOTOR_1 = 2; 
+const int MOTOR_2 = 3; 
  
 
 
-AF_DCMotor motor2(MOTOR_2, MOTOR12_64KHZ); // Right Hand side Motor
-AF_DCMotor motor3(MOTOR_3, MOTOR12_64KHZ); // Left Hand side Motor
+AF_DCMotor motor1(MOTOR_2, MOTOR12_64KHZ); // Right Hand side Motor
+AF_DCMotor motor2(MOTOR_3, MOTOR12_64KHZ); // Left Hand side Motor
 
 int state;
 int Speed = 180;       // Initial speed of Vehicle
@@ -27,8 +27,8 @@ if(state > 10){Speed = state;}
 }
            
          // set the motor speed to 0-255
+motor1.setSpeed(Speed);
 motor2.setSpeed(Speed);
-motor3.setSpeed(Speed);
 
 //===============================================================================
 //                          Key Control Command
@@ -50,35 +50,35 @@ delay(80);
 
 void forward(){
  
-motor2.run(FORWARD);    // move forward
-motor3.run(FORWARD); 
+motor1.run(FORWARD);    // move forward
+motor2.run(FORWARD); 
 
 }
 
 void backward(){
 
-motor2.run(BACKWARD);    // move backward
-motor3.run(BACKWARD); 
+motor1.run(BACKWARD);    // move backward
+motor2.run(BACKWARD); 
  
 }
 
 void turnRight(){
 
-motor2.run(BACKWARD);     // Turn Right
-motor3.run(FORWARD); 
+motor1.run(BACKWARD);     // Turn Right
+motor2.run(FORWARD); 
 
 }
 
 void turnLeft(){
 
-motor2.run(FORWARD);       // Turn Left
-motor3.run(BACKWARD); 
+motor1.run(FORWARD);       // Turn Left
+motor2.run(BACKWARD); 
 
 }
 
 void Stop(){
 
- motor2.run(RELEASE);      // Stop
- motor3.run(RELEASE);
+ motor1.run(RELEASE);      // Stop
+ motor2.run(RELEASE);
 
 }
