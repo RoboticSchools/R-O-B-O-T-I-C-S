@@ -9,8 +9,8 @@
 
  
 
-AF_DCMotor motor1(2, MOTOR12_64KHZ); // create motor object, 64KHz pwm
-AF_DCMotor motor2(3, MOTOR12_64KHZ); // create motor object, 64KHz pwm
+AF_DCMotor motor1(2, MOTOR12_64KHZ); // Rightside Motor
+AF_DCMotor motor2(3, MOTOR12_64KHZ); // Leftside Motor
 
 int distance;
 long duration;
