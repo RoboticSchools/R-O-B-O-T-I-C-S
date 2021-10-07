@@ -1,4 +1,7 @@
 ### 1. DHT - 11 SENSOR TO CHECK TEMPERATURE AND HUMIDITY
+
+<img src="https://8051microcontrollers.com/wp-content/uploads/2018/08/arduino-dht11-temperature-humidity-1.png" width=50% height=50%>
+
 ```C++
 /* 
  *  Project Name : LED Control using Android App
