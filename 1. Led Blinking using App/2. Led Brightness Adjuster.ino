@@ -5,8 +5,8 @@
                   
                   WELCOME TO THE ROBOTEER'S WORLD
     ------------------------------------------------------------------
-    Project Name : LED Control using Android App
-    This program helps you to control a LED on pin 13 of arduino using a bluetooth module
+    Project Name : LED Brightness Control using Android App
+    This program helps you to control LED Brightness using bluetooth module and Android App
  */
 int led = 7;            // Initilizing the Led pin
 int data = 0;           // Storing data coming from Android App
