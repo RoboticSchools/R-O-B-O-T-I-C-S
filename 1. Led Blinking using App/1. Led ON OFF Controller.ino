@@ -1,8 +1,12 @@
 /* 
- *  Project Name : LED Control using Android App
- *  Created by - RoboticSchools
- *  Website - www.roboticschools.com
- *  This program helps you to control a LED on pin 13 of arduino using a bluetooth module
+    Created by RoboticSchools
+    ------------------------------------------------------------------
+    Robotics and Coding are always fun when we are doing with our Hands
+                  
+                  WELCOME TO THE ROBOTEER'S WORLD
+    ------------------------------------------------------------------
+    Project Name : LED Control using Android App
+    This program helps you to control a LED on pin 13 of arduino using a bluetooth module
  */
 char data = 0;                //Variable for storing Incoming_value from Android App
 void setup() 
