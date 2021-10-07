@@ -1,3 +1,6 @@
+### 1. LED ON OFF CONTROLLER USING ANDROID APP
+![LED ON OFF](https://i.pinimg.com/originals/33/ab/b8/33abb8a52aafb41bdea8745ea85b6ae7.gif)
+
 Click on this link to open the
 [LED APP CONTROLLER](https://gallery.appinventor.mit.edu/?galleryid=ac75ed0f-f5fe-4a53-ae39-82255356344a)
 
@@ -31,6 +34,10 @@ void loop()
 }                 
            
 ```
+
+### 2. LED BRIGHTNESS CONTROLLER USING ANDROID APP
+![LED BRIGHTNESS](https://nooracomart.com/uploads/4/2020-07/2e30ecb95dd3a3000a7db24398f72224.gif)
+
 Click on this link to open the
 [LED BRIGHTNESS CONTROLLER USING ANDROID APP](https://gallery.appinventor.mit.edu/?galleryid=0fa635e3-07ae-469c-a28b-481a4944259d)
 
