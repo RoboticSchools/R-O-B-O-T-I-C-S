@@ -1,3 +1,9 @@
+CS 3
+CLK 13
+DIN  11
+VCC 5V
+GND GND
+
 // Including the required Arduino libraries
 #include <MD_Parola.h>
 #include <MD_MAX72xx.h>
