@@ -30,7 +30,7 @@ void setup() {
   // Clear the display
   myDisplay.displayClear();
 
-  myDisplay.displayScroll("MUNI MIK", PA_CENTER, PA_SCROLL_LEFT, 100);
+  myDisplay.displayScroll("ROBOTICSCHOOLS", PA_CENTER, PA_SCROLL_LEFT, 100);
 }
 
 void loop() {
