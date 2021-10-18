@@ -1,8 +1,9 @@
 /* 
- *  Project Name : LED Control using Android App
- *  Created by - RoboticSchools
- *  Website - www.roboticschools.com
- *  This program lets you to control a LED on pin 13 of arduino using a bluetooth module
+ *  Created by RoboticSchools
+ *  Robotics and Coding always fun when we're doing with our hands.
+ *  " Welcome to the Roboteer's World "
+ *  
+ *  CHECKING TEMPERATURE AND HUMIDITY USING DHT-11 SENSOR
  */
 
 #include <dht.h>        // Adding DHT 11 Library.
