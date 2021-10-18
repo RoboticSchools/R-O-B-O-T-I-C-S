@@ -25,8 +25,8 @@ void loop() {
  
  if (soundsens>=threshold) {
  
- digitalWrite(ledpin,HIGH); //turns led on
- delay(1000);
+  digitalWrite(ledpin,HIGH); //turns led on
+  delay(1000);
  
  }
 
