@@ -36,7 +36,7 @@ void loop()
 }
 ```
 
-## 2. Turning ON & OFF LED Using IR Remote
+## 2. Turning LED ON & OFF Using IR Remote
 
 <img src="https://i.ytimg.com/vi/KQiVLEhzzV0/maxresdefault.jpg" width=50% height=50%>
 
