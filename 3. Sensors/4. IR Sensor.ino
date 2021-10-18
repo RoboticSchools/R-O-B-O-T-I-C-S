@@ -1,13 +1,16 @@
+/* 
+ *  Created by RoboticSchools
+ *  Robotics and Coding always fun when we're doing with our hands.
+ *  " Welcome to the Roboteer's World "
+ *  
+ *  LED ON & OFF BASED ON AMOUNT OF DARK & BRIGHT COLORS USING IR SENSOR
+ */
+ 
 int IRSensor = 2; // connect ir sensor to arduino pin 2
 int LED = 13; // conect Led to arduino pin 13
 
-
-
 void setup() 
 {
-
-
-
   pinMode (IRSensor, INPUT); // sensor pin INPUT
   pinMode (LED, OUTPUT); // Led pin OUTPUT
 }
