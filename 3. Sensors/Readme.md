@@ -149,7 +149,7 @@ void loop()
 
 ### 5. Ultrasonic Sensor
 
-<img src="https://hacksterio.s3.amazonaws.com/uploads/attachments/991550/uploads2ftmp2f1d55fc38-3158-4c72-b4e7-38e28e1a954c2farduinohc-sr04_wHDpy0Fy2F.png" width=50% height=50%>
+<img src="https://marcteyssier.com/uduino/content/3-projects/3-ultrasonic-sensor-hc-sr04-on-unity/schematics.png" width=50% height=50%>
 
 ```c++
 // ---------------------------------------------------------------- //
@@ -195,7 +195,7 @@ void loop() {
 
 ### 5. PIR Sensor
 
-<img src="https://hacksterio.s3.amazonaws.com/uploads/attachments/1163498/motion_qegdcmfm0u_dzlLmuKjsR.png" width=50% height=50%>
+<img src="https://cdn-learn.adafruit.com/assets/assets/000/000/543/medium800/proximity_pirardbb.gif" width=50% height=50%>
 
 ```c++
 int led = 13;                // the pin that the LED is atteched to
