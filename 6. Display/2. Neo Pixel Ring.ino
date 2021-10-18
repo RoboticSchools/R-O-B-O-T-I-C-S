@@ -1,6 +1,14 @@
+/* 
+ *  Created by RoboticSchools
+ *  Robotics and Coding always fun when we're doing with our hands.
+ *  " Welcome to the Roboteer's World "
+ *  
+ *  NEO PIXEL RING ARDUINO CODE
+ */
+
 #include <Adafruit_NeoPixel.h>
 #ifdef __AVR__
-  #include <avr/power.h>
+#include <avr/power.h>
 #endif
 #define PIN        6
 #define NUMPIXELS 16
