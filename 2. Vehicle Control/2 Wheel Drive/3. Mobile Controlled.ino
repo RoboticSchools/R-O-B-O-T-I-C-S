@@ -1,3 +1,9 @@
+// Created by RoboticSchools.
+// Robotics and Coding always fun when we're doing with our hands.
+// " Welcome to the Roboteer's World "
+
+// MOBILE CONTROL ROBOT - 2 WHEEL DRIVE
+
 #include "AFMotor.h"
 
 const int MOTOR_1 = 2; 
