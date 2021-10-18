@@ -8,13 +8,6 @@
  *  Robotics and Coding always fun when we're doing with our hands.
  *  " Welcome to the Roboteer's World "
  *  
- *  PUSH BUTTON PIANO USING ARDUINO CODE
- */
-/* 
- *  Created by RoboticSchools
- *  Robotics and Coding always fun when we're doing with our hands.
- *  " Welcome to the Roboteer's World "
- *  
  *  AUTHORIZATION USING RF ID AND DISPLAY
  */
 
