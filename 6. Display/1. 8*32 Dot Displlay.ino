@@ -1,8 +1,16 @@
-CS 3
-CLK 13
-DIN  11
-VCC 5V
-GND GND
+/* 
+ *  Created by RoboticSchools
+ *  Robotics and Coding always fun when we're doing with our hands.
+ *  " Welcome to the Roboteer's World "
+ *  
+ *  SCROLLING TEXT ON DOT DISPLAY
+ */
+
+#define CS 3
+#define CLK 13
+#define DIN  11
+#define VCC 5V
+#define GND GND
 
 // Including the required Arduino libraries
 #include <MD_Parola.h>
