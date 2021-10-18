@@ -3,7 +3,7 @@
  *  Robotics and Coding always fun when we're doing with our hands.
  *  " Welcome to the Roboteer's World "
  *  
- *  PRINTING DISTANCE VALUES IN SERIAL MONITOR USING IR SENSOR
+ *  PRINTING DISTANCE VALUES IN SERIAL MONITOR USING ULTRASONIC SENSOR
  */
 
 #define echoPin 2        // attach pin D2 Arduino to pin Echo of HC-SR04
