@@ -3,7 +3,7 @@
  *  Robotics and Coding always fun when we're doing with our hands.
  *  " Welcome to the Roboteer's World "
  *  
- *  Finding RF ID using Arduino Code
+ *  Finding RF ID Number using Arduino Code
  */
 
 /* Typical pin layout used:
