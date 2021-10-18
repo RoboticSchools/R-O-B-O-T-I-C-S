@@ -290,7 +290,7 @@ void Stop(){
 }
 
 ```
-### 3. Light Following Robot - 4 Wheeel Drive
+### 4. Light Following Robot - 4 Wheeel Drive
 
 <img src="https://hackster.imgix.net/uploads/attachments/1288750/_bNQK2tvAgk.blob?auto=compress%2Cformat&w=900&h=675&fit=min" width="600" height="400" />
 
