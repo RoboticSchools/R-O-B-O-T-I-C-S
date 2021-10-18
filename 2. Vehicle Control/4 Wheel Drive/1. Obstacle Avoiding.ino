@@ -1,3 +1,9 @@
+// Created by RoboticSchools.
+// Robotics and Coding always fun when we're doing with our hands.
+// " Welcome to the Roboteer's World "
+
+// OBSTACLE AVAOIDING ROBOT - 4 WHEEL DRIVE
+
 #include "AFMotor.h"
 
 #define echopin A3 // echo pin  --- Change these two numbers to respective numbers those are connected in Arduino.
