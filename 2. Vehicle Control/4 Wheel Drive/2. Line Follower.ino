@@ -1,3 +1,9 @@
+// Created by RoboticSchools.
+// Robotics and Coding always fun when we're doing with our hands.
+// " Welcome to the Roboteer's World "
+
+// LINE FOLLOWER ROBOT - 4 WHEEL DRIVE
+
 #include <AFMotor.h>
 
 #define lefts A5    --- Change these two numbers to respective numbers those are connected in Arduino.
