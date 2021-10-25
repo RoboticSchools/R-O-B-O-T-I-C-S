@@ -169,9 +169,9 @@ void loop()
   delay(10); // Delay a little bit to improve simulation performance
 }
 
-## 2. Social Distance Alarm
+## 2. Weather Station ---- DHT-11 and OLED Display
 
-<img src="https://hackster.imgix.net/uploads/attachments/635638/blob_qSxfmzmc3s.blob?auto=compress%2Cformat&w=900&h=675&fit=min" width=40% height=40%>
+
 
 ```C++
 #include <Wire.h>
