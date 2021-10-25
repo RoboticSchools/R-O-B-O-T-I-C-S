@@ -66,4 +66,14 @@ void loop() {
   display.print(" %"); 
   
   display.display(); 
+}  // display humidity
+  display.setTextSize(1);
+  display.setCursor(0, 35);
+  display.print("Humidity: ");
+  display.setTextSize(2);
+  display.setCursor(0, 45);
+  display.print(h);
+  display.print(" %"); 
+  
+  display.display(); 
 }
