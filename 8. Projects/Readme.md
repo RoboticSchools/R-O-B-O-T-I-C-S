@@ -256,4 +256,157 @@ void loop() {
 }
 
 ```
+## 3.Social distance alarm
 
+
+
+```C++
+int animationSpeed = 0;
+
+int distanceThreshold = 0;
+
+int cm = 0;
+
+int inches = 0;
+
+long readUltrasonicDistance(int triggerPin, int echoPin)
+{
+  pinMode(triggerPin, OUTPUT);  // Clear the trigger
+  digitalWrite(triggerPin, LOW);
+  delayMicroseconds(2);
+  // Sets the trigger pin to HIGH state for 10 microseconds
+  digitalWrite(triggerPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(triggerPin, LOW);
+  pinMode(echoPin, INPUT);
+  // Reads the echo pin, and returns the sound wave travel time in microseconds
+  return pulseIn(echoPin, HIGH);
+}
+// NeoPixel Ring
+#include <Adafruit_NeoPixel.h>
+
+#ifdef __AVR__
+  #include <avr/power.h>
+#endif
+
+//pin  
+#define PIN 13
+//pixel number
+#define PIX      16
+
+Adafruit_NeoPixel pixels = Adafruit_NeoPixel(PIX, PIN, NEO_GRB + NEO_KHZ800);
+
+void setup()
+{
+  Serial.begin(9600);
+
+  pinMode(13, OUTPUT);
+ 
+  animationSpeed = 100;
+     pixels.begin();
+
+  pixels.setPixelColor(0, pixels.Color(100,255,6));
+  pixels.show();
+  delay(1000);
+}
+
+void loop()
+{
+ 
+ 
+  // set threshold distance to activate LEDs
+  distanceThreshold = 325;
+  // measure the ping time in cm
+  cm = 0.01723 * readUltrasonicDistance(7,6);
+  // convert to inches by dividing by 2.54
+  inches = (cm / 2.54);
+  Serial.print(cm);
+  Serial.print("cm, ");
+  Serial.print(inches);
+  Serial.println("in");
+ 
+ 
+  if (cm <= distanceThreshold && cm > 225) {
+    for (int i = 0; i < 6; i++)
+      {
+       pixels.setPixelColor(i, pixels.Color(0,225,0));
+      pixels.show();
+     
+     }
+   
+  }
+   if (cm <= 225 && cm > 200) {
+      for (int i = 6; i < 12; i++)
+        {
+    pixels.setPixelColor(i, pixels.Color(0,225,0));
+    pixels.show();
+      }
+   
+  }
+   if (cm <= 200 && cm > 125) {
+      for (int i = 12; i < 16; i++)
+        {
+    pixels.setPixelColor(i, pixels.Color(0,225,0));
+    pixels.show();
+      }
+   
+  }
+
+
+ 
+  if (cm <= 125 && cm > 80) {
+      for (int i = 0; i < 7; i++)
+        {
+    pixels.setPixelColor(i, pixels.Color(225,225,0));
+    pixels.show();
+      }
+   
+  }
+  if (cm <= 80 && cm > 50) {
+      for (int i = 7; i < 12; i++)
+        {
+    pixels.setPixelColor(i, pixels.Color(225,225,0));
+    pixels.show();
+      }
+   
+  }
+if (cm <= 55 && cm > 35) {
+      for (int i = 12; i < 16; i++)
+        {
+    pixels.setPixelColor(i, pixels.Color(225,225,0));
+    pixels.show();
+      }
+   
+  }
+  
+  if (cm <= 35 && cm > 25) {
+      for (int i = 0; i < 6; i++)
+        {
+    pixels.setPixelColor(i, pixels.Color(225,0,0));
+    pixels.show();
+      }
+   
+  }
+  if (cm <= 25 && cm > 10) {
+      for (int i = 6; i < 10; i++)
+        {
+    pixels.setPixelColor(i, pixels.Color(225,0,0));
+    pixels.show();
+      }
+   
+  }
+  if (cm <= 10){
+ 
+    Serial.print("too close");
+ 
+ for (int i = 10; i < 16; i++) {
+    pixels.setPixelColor(i, pixels.Color(225,0,0));
+    pixels.show();
+  }
+  }
+
+
+delay(animationSpeed);
+ 
+}
+```
