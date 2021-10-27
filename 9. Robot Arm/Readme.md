@@ -50,10 +50,10 @@ String receivedString;
 void setup(){
   Serial.begin(9600);
   servoThumb.attach(7);
-  servoIndex.attach(9);
-  servoMiddle.attach(11);
-  servoRing.attach(8);
-  servoPinky.attach(10);
+  servoIndex.attach(8);
+  servoMiddle.attach(9);
+  servoRing.attach(10);
+  servoPinky.attach(11);
   
 }
 
