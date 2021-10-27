@@ -1,3 +1,8 @@
+//# python 3.9
+//# cvzone 1.5.2
+//# mediapipe 0.8.5
+
+
 import cv2
 from cvzone.HandTrackingModule import HandDetector
 from cvzone.SerialModule import SerialObject
