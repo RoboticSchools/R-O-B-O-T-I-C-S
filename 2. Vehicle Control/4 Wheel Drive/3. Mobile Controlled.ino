@@ -5,6 +5,9 @@
 // MOBILE CONTROL ROBOT - 4 WHEEL DRIVE
 
 #include "AFMotor.h"
+#include <SoftwareSerial.h>
+
+SoftwareSerial mySerial(2, 3); // RX, TX
 
 const int MOTOR_1 = 2; 
 const int MOTOR_2 = 3;
@@ -29,12 +32,13 @@ motor3.setSpeed(Speed);
 motor4.setSpeed(Speed);
   
 Serial.begin(9600);
+mySerial.begin(9600);
 delay(500); 
 }
 
 void loop(){   
-if(Serial.available() > 0){  //if some date is sent, reads it and saves in state     
-state = Serial.read();      
+if(mySerial.available() > 0){  //if some date is sent, reads it and saves in state     
+state = mySerial.read();      
 if(state > 10){Speed = state;}      
 }
            
@@ -83,8 +87,8 @@ motor4.run(BACKWARD);
 void turnRight(){
 // the other right
 motor1.run(BACKWARD); 
-motor2.run(BACKWARD); 
-motor3.run(FORWARD); 
+motor2.run(FORWARD); 
+motor3.run(BACKWARD); 
 motor4.run(FORWARD); 
 
 }
@@ -92,8 +96,8 @@ motor4.run(FORWARD);
 void turnLeft(){
  // turn it on going left
 motor1.run(FORWARD);
-motor2.run(FORWARD);
-motor3.run(BACKWARD);
+motor2.run(BACKWARD);
+motor3.run(FORWARD);
 motor4.run(BACKWARD); 
 
 }
