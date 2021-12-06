@@ -6,7 +6,7 @@
 
 #include "AFMotor.h"
 
-#define echopin A3 // echo pin  //change these two numbers to respective numbers those are connected in Arduino.
+#define echopin A5 // echo pin  //change these two numbers to respective numbers those are connected in Arduino.
 #define trigpin A4 // Trigger pin
 
  
