@@ -6,7 +6,7 @@
 
 #include "AFMotor.h"
 
-#define echopin A3 // echo pin  --- Change these two numbers to respective numbers those are connected in Arduino.
+#define echopin A5 // echo pin  --- Change these two numbers to respective numbers those are connected in Arduino.
 #define trigpin A4 // Trigger pin
 
  
@@ -29,10 +29,10 @@ void setup() {
   pinMode (trigpin, OUTPUT);
   pinMode (echopin, INPUT );
   
-  motor1.setSpeed(255);          // set the motor speed to 0-255
-  motor2.setSpeed(255);
-  motor3.setSpeed(255);          
-  motor4.setSpeed(255);
+  motor1.setSpeed(150);          // set the motor speed to 0-255
+  motor2.setSpeed(150);
+  motor3.setSpeed(150);          
+  motor4.setSpeed(150);
 
 }
 
@@ -70,3 +70,4 @@ long data(){
   duration = pulseIn (echopin, HIGH);
   return duration / 29 / 2;
 }
+
