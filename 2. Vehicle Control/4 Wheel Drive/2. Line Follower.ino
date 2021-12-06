@@ -4,10 +4,11 @@
 
 // LINE FOLLOWER ROBOT - 4 WHEEL DRIVE
 
+
 #include <AFMotor.h>
 
-#define lefts A5    --- Change these two numbers to respective numbers those are connected in Arduino.
-#define rights A1 
+#define lefts A5
+#define rights A0 
 
 
 AF_DCMotor motor1(2, MOTOR12_8KHZ);  // RightHand Side - Front Motor
@@ -24,6 +25,10 @@ void setup() {
   pinMode(rights,INPUT);
 
   Serial.begin(9600);
+  motor1.setSpeed(100);
+  motor2.setSpeed(100);
+  motor3.setSpeed(100);
+  motor4.setSpeed(100);
   
   
 }
@@ -36,13 +41,13 @@ void loop(){
   if(digitalRead(lefts)==0 && digitalRead(rights)==0){
     
     motor1.run(FORWARD);
-    motor1.setSpeed(170);
+    
     motor2.run(FORWARD);
-    motor2.setSpeed(170);       //FORWARD
+       
     motor3.run(FORWARD);
-    motor3.setSpeed(170);
+   
     motor4.run(FORWARD);
-    motor4.setSpeed(170);
+    
 
 
   }
@@ -50,13 +55,13 @@ void loop(){
   else if(digitalRead(lefts)==0 && digitalRead(rights)==1){
 
     motor1.run(BACKWARD);
-    motor1.setSpeed(140);
+   
     motor2.run(FORWARD);
-    motor2.setSpeed(170);
+   
     motor3.run(BACKWARD);     // Turn Right
-    motor3.setSpeed(140);
+  
     motor4.run(FORWARD);
-    motor4.setSpeed(170);
+  
 
   }
   //line detected by left sensor
@@ -64,13 +69,13 @@ void loop(){
 
 
     motor1.run(FORWARD);
-    motor1.setSpeed(170);
+  
     motor2.run(BACKWARD);
-    motor2.setSpeed(140);
+   
     motor3.run(FORWARD);      // Turn Left 
-    motor3.setSpeed(170);
+ 
     motor4.run(BACKWARD);
-    motor4.setSpeed(140);
+   
 
 
 
