@@ -28,7 +28,7 @@ void setup() {
   // set the motor speed to 0-255
 motor1.setSpeed(Speed);
 motor2.setSpeed(Speed);
-motor3.setSpeed(Speed);
+motor3.setSpeed(Speed); 
 motor4.setSpeed(Speed);
   
 Serial.begin(9600);
