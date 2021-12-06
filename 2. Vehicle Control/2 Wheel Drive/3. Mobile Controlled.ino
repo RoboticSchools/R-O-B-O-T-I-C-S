@@ -5,30 +5,35 @@
 // MOBILE CONTROL ROBOT - 2 WHEEL DRIVE
 
 #include "AFMotor.h"
+#include <SoftwareSerial.h>
+
+SoftwareSerial mySerial(2, 3); // RX, TX
 
 const int MOTOR_1 = 2; 
 const int MOTOR_2 = 3; 
  
 
 
-AF_DCMotor motor1(MOTOR_2, MOTOR12_64KHZ); // Right Hand side Motor
-AF_DCMotor motor2(MOTOR_3, MOTOR12_64KHZ); // Left Hand side Motor
+AF_DCMotor motor1(MOTOR_1, MOTOR12_64KHZ); // Right Hand side Motor
+AF_DCMotor motor2(MOTOR_2, MOTOR12_64KHZ); // Left Hand side Motor
 
 int state;
 int Speed = 180;       // Initial speed of Vehicle
 
 void setup() {
   // set the motor speed to 0-255
+motor1.setSpeed(Speed);
 motor2.setSpeed(Speed);
-motor3.setSpeed(Speed);
   
 Serial.begin(9600);
+  
+mySerial.begin(9600);
 delay(500); 
 }
 
 void loop(){   
-if(Serial.available() > 0){  //if some date is sent, reads it and saves in state     
-state = Serial.read();      
+if(mySerial.available() > 0){  //if some date is sent, reads it and saves in state     
+state = mySerial.read();      
 if(state > 10){Speed = state;}      
 }
            
