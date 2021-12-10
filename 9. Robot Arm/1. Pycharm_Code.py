@@ -1,6 +1,7 @@
-//# python 3.9
-//# cvzone 1.5.2
-//# mediapipe 0.8.5
+# python 3.9
+# cvzone 1.5.2
+# mediapipe 0.8.5
+# serialDevice 0.2
 
 
 import cv2
